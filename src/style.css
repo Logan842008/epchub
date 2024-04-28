@@ -1,0 +1,53 @@
+@keyframes bounce1 {
+  0%,
+  100% {
+    transform: translateY(-15%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce1 {
+  animation: bounce1 1s infinite;
+}
+
+@keyframes bounce2 {
+  0%,
+  100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce2 {
+  animation: bounce2 1.5s infinite;
+}
+
+.animate-bounce3 {
+  animation: bounce2 1.5s infinite;
+  animation-delay: 0.2s;
+}
+
+.animate-bounce4 {
+  animation: bounce2 1.5s infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse1 {
+  50% {
+    opacity: 0.65;
+  }
+}
+
+.animate-pulse1 {
+  animation: pulse1 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>EPC HUB</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link href="/styles/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body
+    class="dark:bg-neutral-800 bg-neutral-200 text-neutral-900 dark:text-neutral-100 font-orbitron min-h-[100vh] flex-col flex justify-center items-center overflow-x-hidden w-[100vw]"
+  >
+    <nav
+      class="fixed w-[100%] top-0 right-0 z-[1000] flex align-middle justify-between bg-transparent backdrop-blur-sm xl:px-[12%] py-[28px] transition-all duration-[0.5s] ease-linear px-[5%]"
+    >
+      <a href="#home" class="logo flex align-middle"
+        ><i
+          class="ri-computer-fill bg-gradient-to-tl from-blue-300 to-blue-500 dark:from-purple-300 dark:to-purple-500 inline-block text-transparent bg-clip-text text-3xl me-3"
+        ></i
+        ><span class="mt-[2px] font-extrabold text-2xl">EPC HUB</span>
+      </a>
+      <ul
+        class="navbar max-lg:hidden font-bold transition duration-[0.1s] ease-linear max-lg:flex-col max-lg:gap-y-6 max-lg:absolute flex mt-2 max-lg:top-[100px] max-lg:p-10 max-lg:right-[-100%] max-lg:justify-items-start max-lg:dark:bg-neutral-900 max-lg:bg-neutral-300 max-lg:rounded-md"
+      >
+        <li>
+          <a
+            href="#home"
+            class="hover:text-blue-400 dark:hover:text-purple-400 transition-all duration-[0.5s] px-0 me-[50px] lg:me-[30px] text-base"
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-blue-400 dark:hover:text-purple-400 transition-all duration-[0.5s] px-0 py-[5px] me-[50px] lg:me-[30px] text-base hover:translate-y-6"
+            href="#about"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-blue-400 dark:hover:text-purple-400 transition-all duration-[0.5s] px-0 py-[5px] me-[50px] lg:me-[30px] text-base hover:translate-y-6"
+            href="#products"
+            >PRODUCTS</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-blue-400 dark:hover:text-purple-400 transition-all duration-[0.5s] px-0 py-[5px] me-[50px] lg:me-[30px] text-base hover:translate-y-6"
+            href="#cart"
+            >CART</a
+          >
+        </li>
+      </ul>
+      <div
+        class="main flex align-middle lg:hidden transition duration-[0.5s] cursor-pointer"
+      >
+        <i class="ri-menu-line text-2xl" id="menu-icon"></i>
+      </div>
+    </nav>
+    <!-- <header
+      id="home"
+      class="min-h-[80vh] flex justify-between items-center font-bold w-[100vw] xl:px-[8%] px-[5%] transition-all duration-[0.5s] ease-linear relative"
+    >
+      <div class="grid grid-cols-2 col-gap-8 w-full h-full row-gap-10">
+        <div class="lg:col-span-1 max-lg:col-span-2 relative h-full">
+          <div
+            class="dark:bg-purple-900 bg-blue-900 absolute top-[100%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[80%] h-[100px] rounded-[50%] blur-[40px]"
+          ></div>
+          <img
+            src="src/assets/black.png"
+            class="relative mt-[70px] md:mt-0 md:top-[65%] max-lg:top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[70%] lg:w-[100%] hidden dark:block"
+            alt=""
+          />
+          <img
+            src="src/assets/white.png"
+            class="relative mt-[70px] md:mt-0 md:top-[65%] max-lg:top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[30%] lg:w-[100%] max-lg:w-[50%] block dark:hidden"
+            alt=""
+          />
+        </div>
+        <div
+          class="lg:col-span-1 max-lg:col-span-2 flex flex-col justify-center items-center w-[100%] h-full text-center"
+        >
+          <div
+            class="text animate-bounce1 flex flex-col justify-center items-center max-lg:mt-[450px] lg:top-[50%] translate-x-[-50%] w-[100%] translate-y-[-50%]"
+          >
+            <h1
+              class="text-5xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] from-shadow-lg"
+            >
+              EPC HUB
+            </h1>
+            <p class="text-2xl md:text-3xl drop-shadow-lg">
+              Build Your
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600"
+                >Digital Future</span
+              >: Customize, Create,
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600"
+                >Conquer</span
+              >!
+            </p>
+          </div>
+          <div
+            class="text animate-pulse1 flex justify-center items-center "
+          >
+            <a href="#products" class="py-5 px-10 bg-gradient-to-tr dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 rounded-full">START BUILDING!</a>
+          </div>
+        </div>
+      </div>
+    </header> -->
+    <header
+  id="home"
+  class="min-h-screen flex items-center justify-center font-bold w-full px-5 xl:px-8 transition-all duration-500 ease-linear relative"
+>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 w-[90%] h-full">
+    <!-- Image container -->
+    <div class="flex justify-center lg:justify-end items-center h-full relative">
+      <div
+            class="dark:bg-purple-900 z-0 bg-blue-900 absolute top-[90%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[80%] h-[100px] rounded-[50%] blur-[40px]"
+          ></div>
+      <img
+        src="src/assets/black.png"
+        class="hidden dark:block lg:max-w-full lg:h-auto z-10" 
+        alt="Dark mode image"
+      />
+      <img
+        src="src/assets/white.png"
+        class="block dark:hidden lg:max-w-full lg:h-auto z-10" 
+        alt="Light mode image"
+      />
+    </div>
+    <!-- Text container -->
+    <div class="flex flex-col justify-center items-center h-full text-center lg:px-4"> <!-- Adjust padding here if necessary -->
+      <h1 class="text-5xl animate-bounce1 md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 mb-2 md:mb-4">
+        EPC HUB
+      </h1>
+      <p class="text-2xl md:text-3xl drop-shadow-lg xl:w-[700px] max-xl:w-full">
+        Build Your
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 dark:from-purple-600 dark:via-purple-400 dark:to-purple-600">
+          Digital Future
+        </span>: Customize, Create,
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 dark:from-purple-600 dark:via-purple-400 dark:to-purple-600">
+          Conquer!
+        </span>
+      </p>
+      <br>
+      <a
+        href="#products"
+        class="mt-4 animate-pulse lg:mt-0 bg-gradient-to-tr from-blue-600 via-blue-400 to-blue-600 dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 text-white py-4 px-6 rounded-full transition duration-300 ease-in-out"
+      >
+        START BUILDING!
+      </a>
+    </div>
+  </div>
+</header>
+
+    
+    
+    
+    <main>
+      <section
+        id="about"
+        class="min-h-[100vh] flex flex-col justify-center items-center text-center font-bold w-[100vw] xl:px-[8%] px-[5%] transition-all duration-[0.5s] ease-linear relative"
+      >
+        <h1
+          class="text-5xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] from-shadow-lg mt-[30px]"
+        >
+          ABOUT US
+        </h1>
+        <br />
+        <p>
+          Elite PC Hub offers comprehensive hardware and software solutions for a
+          seamless user experience. Our products combine elegance and
+          performance for the ultimate user experience. We provide:
+        </p>
+        <br />
+        <div class="grid grid-cols-3 flex-wrap">
+          <div
+            class="md:col-span-1 max-md:col-span-3 border-r-[3px] w-full h-full md:dark:border-r-purple-500 md:border-r-blue-500 max-md:border-r-0 max-md:border-b-[3px] max-md:dark:border-purple-500 max-md:border-b-blue-500 p-6 flex flex-col justify-center items-center"
+          >
+            <img src="src/assets/intel-i9.jpg" class="w-[30%] animate-bounce2 rounded-lg" alt="" />
+            <h1
+              class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] from-shadow-lg mt-[30px]"
+            >
+              INTEL CPU
+            </h1>
+            <p>
+              The Intel i9-14900KS is built with 24 cores and 32 threads which
+              has a max clocking speed of 6GHz. The best option for performance.
+            </p>
+          </div>
+          <div
+            class="md:col-span-1 max-md:col-span-3 border-x-[3px] w-full h-full md:dark:border-x-purple-500 md:border-x-blue-500 max-md:border-x-0 max-md:border-y-[3px] max-md:dark:border-y-purple-500 max-md:border-y-blue-500 p-6 flex flex-col justify-center items-center"
+          >
+            <img src="src/assets/amg.png" class="w-[30%] animate-bounce3 rounded-lg" alt="" />
+            <h1
+              class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] from-shadow-lg mt-[30px]"
+            >
+              AMD CPU
+            </h1>
+            <p>
+              The AMD Ryzen 9 7900X3D is built 12 cores and 24 threads which has
+              a max clocking speed of 5.6GHz. The best choice to long battery
+              life.
+            </p>
+          </div>
+          <div
+            class="md:col-span-1 max-md:col-span-3 border-l-[3px] w-full h-full md:dark:border-l-purple-500 md:border-l-blue-500 max-md:border-l-0 max-md:border-t-[3px] max-md:dark:border-t-purple-500 max-md:border-t-blue-500 p-6 flex flex-col justify-center items-center"
+          >
+            <img src="src/assets/gpu.jpg" class="w-[30%] animate-bounce4 rounded-lg" alt="" />
+            <h1
+              class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] from-shadow-lg mt-[30px]"
+            >
+              RTX GPU
+            </h1>
+            <p>
+              The RTX 4090 from NVIDIA is the most powerful graphics card to
+              date as it has 16GB built in RAM which allows for a 144fps in 4k
+              display.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="products"
+        class="min-h-[100vh] flex flex-col justify-center items-center text-center font-bold w-[100vw] xl:px-[8%] px-[5%] transition-all duration-[0.5s] ease-linear relative"
+      >
+        <h1
+          class="text-4xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] from-shadow-lg mt-[30px]"
+        >
+          OUR PRODUCTS
+        </h1>
+        <br />
+        <p>Elite PC Hub offers two choices for the user. Choose your weapon to ace your game:</p>
+        <br />
+        <div class="grid grid-cols-2 flex-wrap">
+          <div
+            class="md:col-span-1 max-md:col-span-2 border-r-[3px] w-full h-full md:dark:border-r-purple-500 md:border-r-blue-500 max-md:border-r-0 max-md:border-b-[3px] max-md:dark:border-purple-500 max-md:border-b-blue-500 p-6 flex flex-col justify-center items-center bg-neutral-200 hover:bg-neutral-300 hover:dark:bg-neutral-900 transition-all duration-500 rounded-l-3xl max-md:rounded-bl-none max-md:rounded-t-3xl dark:bg-neutral-800"
+          >
+          <img src="src/assets/laptop.avif" class="w-[61.5%] animate-bounce2" alt="" />
+          <h1
+            class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] drop-shadow-lg mt-[30px]"
+          >
+            GAMING LAPTOPS
+          </h1>
+          <p>
+            We collaborated with Legion to give the Legion Series a new, fresh design while maxing up every spec imaginable so that gamers can surpass its maximum boundaries.
+          </p>
+          <div
+          class="text flex flex-col justify-center items-center w-[100%] mt-6"
+        >
+          <a href="#laptops" id="button-laptop" class="py-5 px-10 bg-gradient-to-tr dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 rounded-full">BUILD NOW</a>
+        </div>
+          </div>
+          <div
+            class="md:col-span-1 max-md:col-span-2 border-l-[3px] w-full h-full md:dark:border-l-purple-500 md:border-l-blue-500 max-md:border-l-0 max-md:border-t-[3px] max-md:dark:border-t-purple-500 max-md:border-t-blue-500 p-6 flex flex-col justify-center items-center bg-neutral-200 hover:bg-neutral-300 hover:dark:bg-neutral-900 transition-all duration-500 rounded-r-3xl max-md:rounded-tr-none max-md:rounded-b-3xl dark:bg-neutral-800"
+          >
+          <img src="src/assets/rgb-black.png" class="w-[43%] block animate-bounce2" alt="" />
+          <h1
+            class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] drop-shadow-lg mt-[30px]"
+          >
+            GAMING DESKTOPS
+          </h1>
+          <p>
+            NZXT has consented to work with us so that the desktops would offer exceptional performance in addition to NZXT's cutting-edge, remarkable RGB modifications.
+          </p>
+          <div
+        class="text flex flex-col justify-center items-center w-[100%] mt-6"
+      >
+        <a href="#desktops" id="button-desktop" class="py-5 px-10 bg-gradient-to-tr dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 rounded-full">BUILD NOW</a>
+      </div>
+          </div>
+        </div>
+        <br><br>  
+        <div id="laptops" class="hidden opacity-0 transition-all duration-500 border-[5px] dark:border-purple-500 border-blue-500 rounded-lg p-5 dark:bg-neutral-900 bg-neutral-300">
+          <h1
+          class="md:text-5xl max-md:text-3xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] from-shadow-lg mt-[30px]"
+        >
+          GAMING LAPTOPS
+        </h1>
+          <div class="grid grid-cols-3 justify-center items-center flex-wrap">
+          
+            <div
+              class="md:col-span-1 max-md:col-span-3 rounded-lg w-full h-full p-6 flex flex-col justify-center items-center bg-neutral-300transition-all duration-500"
+            >
+            <img src="src/assets/9i.avif" class="w-[65%] animate-bounce2" alt="" />
+            <h1
+              class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] drop-shadow-lg mt-[30px]"
+            >
+              LEGION PRO 9
+            </h1>
+            <p>
+              "Forge Your Future"
+            </p>
+            <div
+            class="text flex flex-col justify-center items-center w-[100%] mt-6"
+          >
+            <a href="#configurator" id="laptop9" data-image="src/assets/9i.avif" class="py-5 px-10 bg-gradient-to-tr dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 rounded-full">CONFIGURE NOW</a>
+          </div>
+            </div>
+            <div
+              class="md:col-span-1 max-md:col-span-3 rounded-lg  w-full h-full p-6 flex flex-col justify-center items-center transition-all duration-500"
+            >
+            <img src="src/assets/pro7i.avif" class="w-[81%] animate-bounce3" alt="" />
+            <h1
+              class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] drop-shadow-lg mt-[30px]"
+            >
+              LEGION PRO 7
+            </h1>
+            <p>
+              "Counquer Your Arena"
+            </p>
+            <div
+            class="text flex flex-col justify-center items-center w-[100%] mt-6"
+          >
+            <a href="#configurator" id="laptop7" data-image="src/assets/pro7i.avif" class="py-5 px-10 bg-gradient-to-tr dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 rounded-full">CONFIGURE NOW</a>
+          </div>
+            </div>
+            <div
+              class="md:col-span-1 max-md:col-span-3 rounded-lg  w-full h-full p-6 flex flex-col justify-center items-center transition-all duration-500 "
+            >
+            <img src="src/assets/pro5.avif" class="w-[81%] animate-bounce4" alt="" />
+            <h1
+              class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] drop-shadow-lg mt-[30px]"
+            >
+              LEGION PRO 5
+            </h1>
+            <p>
+              "Ascend To Greatness"
+            </p>
+            <div
+            class="text flex flex-col justify-center items-center w-[100%] mt-6"
+          >
+            <a href="#configurator" id="laptop5" data-image="src/assets/pro5.avif" class="py-5 px-10 bg-gradient-to-tr dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 rounded-full">CONFIGURE NOW</a>
+          </div>
+            </div>
+          </div>
+        </div>
+        <div id="desktops" class="hidden opacity-0 transition-all duration-500 border-[5px] dark:border-purple-500 border-blue-500 rounded-lg p-5 dark:bg-neutral-900 bg-neutral-300">
+          <h1
+          class="md:text-5xl max-md:text-3xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] from-shadow-lg mt-[30px]"
+        >
+          GAMING DESKTOPS
+        </h1>
+          <div class="grid grid-cols-3 flex-wrap">
+          
+            <div
+              class="md:col-span-1 max-md:col-span-3 rounded-lg  w-full h-full p-6 flex flex-col justify-center items-center bg-neutral-300transition-all duration-500"
+            >
+            <img src="src/assets/p1.png" class="w-[81%] animate-bounce2" alt="" />
+            <h1
+              class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] drop-shadow-lg mt-[30px]"
+            >
+              PLAYER: 1 PRIME
+            </h1>
+            <p>
+              "Setting the Prime Standard"
+            </p>
+            <div
+            class="text flex flex-col justify-center items-center w-[100%] mt-6"
+          >
+            <a href="#configurator" id="p1" class="py-5 px-10 bg-gradient-to-tr dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 rounded-full">CONFIGURE NOW</a>
+          </div>
+            </div>
+            <div
+              class="md:col-span-1 max-md:col-span-3 rounded-lg  w-full h-full p-6 flex flex-col justify-center items-center transition-all duration-500"
+            >
+            <img src="src/assets/p2.png" class="w-[81%] animate-bounce3" alt="" />
+            <h1
+              class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] drop-shadow-lg mt-[30px]"
+            >
+              PLAYER: 2 PRIME
+            </h1>
+            <p>
+              "Prime Power Unleashed"
+            </p>
+            <div
+            class="text flex flex-col justify-center items-center w-[100%] mt-6"
+          >
+            <a href="#configurator" id="p2" class="py-5 px-10 bg-gradient-to-tr dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 rounded-full">CONFIGURE NOW</a>
+          </div>
+            </div>
+            <div
+              class="md:col-span-1 max-md:col-span-3 rounded-lg  w-full h-full p-6 flex flex-col justify-center items-center transition-all duration-500 "
+            >
+            <img src="src/assets/p3.png" class="w-[81%] animate-bounce4" alt="" />
+            <h1
+              class="font-bold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] drop-shadow-lg mt-[30px]"
+            >
+              PLAYER: 3 PRIME
+            </h1>
+            <p>
+              "Prime Champions Rise"
+            </p>
+            <div
+            class="text flex flex-col justify-center items-center w-[100%] mt-6"
+          >
+            <a href="#configurator" id="p3" class="py-5 px-10 bg-gradient-to-tr dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 rounded-full">CONFIGURE NOW</a>
+          </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div id="configurator" class="hidden opacity-0 transition-all duration-500">
+          <div class="grid grid-cols-6 overflow-auto max-h-[80vh] dark:border-purple-500 border-blue-500 rounded-lg p-5 dark:bg-neutral-900 bg-neutral-300 border-[5px]">
+            <div class="max-lg:col-span-6 lg:order-1 max-lg:order-3 lg:col-span-3 h-auto my-[30px]">
+              <div class="flex flex-col justify-center text-left items-left">
+              <p id="laptopname" class="lg:text-left max-lg:text-center text-3xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600">LEGION 9</p>
+              <br>
+              <p class="text-3xl lg:text-left max-lg:text-center mb-[10px] mt-[20px] underline">COMPONENTS</p>
+              <p id="mothertext" class="lg:text-left max-lg:text-center text-xl mb-[10px]">MOTHERBOARD</p>
+              <div id="mother" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/motherboardgood.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">ASUS ROG Maximus Z790 Dark Hero DDR5</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="motherboard">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/motherboardmid.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">ASUS ROG Strix Z790-E Gaming WIFI II DDR5</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-200" data-category="motherboard">-RM200.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/motherboardbad.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">ASRock Z790 Nova WiFi DDR5</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-400" data-category="motherboard">-RM 400.00</a>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xl mb-[10px] lg:text-left max-lg:text-center">PROCESSOR</p>
+              <div class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div id="i9good" class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/i9good.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">14th Gen Intel&reg; Core&trade; i9-14900KF Processor</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="2050" data-category="processor">SELECTED</a>
+                  </div>
+                </div>
+                <div id="amd9good" class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/amd9good.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">AMD Ryzen&trade; 9 7950X3D</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="1550" data-category="processor">+RM 1,550.00</a>
+                  </div>
+                </div>
+                <div id="i7good" class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/i7good.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">14th Gen Intel&reg; Core&trade; i7-14700KF Processor</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="1050" data-category="processor">+RM 1,050.00</a>
+                  </div>
+                </div>
+                <div id="amd7good" class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/amd7good.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">AMD Ryzen&trade; 7 7800X3D</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="500" data-category="processor">+RM500.00</a>
+                  </div>
+                </div>
+                <div id="i9bad" class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/i9bad.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class="text-[14px]">14th Gen Intel&reg; Core&trade; i9-14900HX Processor</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="processor">SELECTED</a>
+                  </div>
+                </div>
+                <div id="amd9bad" class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/amd9bad.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">AMD Ryzen&trade; 9 7900X</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-350" data-category="processor">-RM 350.00</a>
+                  </div>
+                </div>
+                <div id="i7bad" class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+  
+                  <img src="src/assets/i7bad.png" class="rounded-lg" alt="">
+                  <br>
+                      <p class=" text-[14px]">14th Gen Intel&reg; Core&trade; i7-14700HX Processor</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-750" data-category="processor">-RM 750.00</a>
+                  </div>
+                </div>
+                <div id="amd7bad" class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+  
+                  <img src="src/assets/amd7bad.png" class="rounded-lg" alt="">
+                  <br>
+                      <p class=" text-[14px]">AMD Ryzen&trade; 7 7700X</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-1050" data-category="processor">-RM 1,050.00</a>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">GRAPHICS CARD</p>
+              <div class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/4090.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">NVIDIA&reg; Geforce RTX&trade; 4090 Laptop GPU</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="graphics">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/4080.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">NVIDIA&reg; Geforce RTX&trade; 4080 Laptop GPU</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-1000.00" data-category="graphics">-RM 1,000.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/4070.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">NVIDIA&reg; Geforce RTX&trade; 4070 Laptop GPU</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-1500.00" data-category="graphics">-RM 1,500.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+  
+                  <img src="src/assets/4060.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">NVIDIA&reg; Geforce RTX&trade; 4060 Laptop GPU</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-2000.00" data-category="graphics">-RM 2,000.0</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+  
+                  <img src="src/assets/3090.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">NVIDIA&reg; Geforce RTX&trade; 3090 Laptop GPU</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-2500.00" data-category="graphics">-RM 2,500.0</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+  
+                  <img src="src/assets/3080.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">NVIDIA&reg; Geforce RTX&trade; 3080 Laptop GPU</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-3000.00" data-category="graphics">-RM 3,000.0</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+  
+                  <img src="src/assets/3070.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">NVIDIA&reg; Geforce RTX&trade; 3070 Laptop GPU</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-3500.00" data-category="graphics">-RM 3,500.0</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+  
+                  <img src="src/assets/3060.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">NVIDIA&reg; Geforce RTX&trade; 3060 Laptop GPU</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-4000.00" data-category="graphics">-RM 4,000.0</a>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">OPERATING SYSTEM</p>
+              <div class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/win11.png" alt="">
+                  <br>
+                  <p class=" text-[14px]">Windows 11 Pro</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="os">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/win10.png" alt="">
+                  <br>
+                  <p class=" text-[14px]">Windows 10 Pro</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-350.00" data-category="os">-RM 350.00</a>
+                  </div>
+                </div>
+                
+              </div>
+              <p class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">MEMORY</p>
+              <div class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/ram.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">128GB DDR5-5600MHz RAM (SODIMM)</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="ram">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/ram.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">64GB DDR5-5600MHz RAM (SODIMM)</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-1200.00" data-category="ram">-RM 1,200.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/ram.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">32GB DDR5-5600MHz RAM (SODIMM)</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-1800.00" data-category="ram">-RM 1,800.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/ram.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">16GB DDR5-5600MHz RAM (SODIMM)</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-2000.00" data-category="ram">-RM 2,000.00</a>
+                  </div>
+                </div>
+                
+              </div>
+              <p class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">STORAGE</p>
+              <div class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/storage.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">8 TB SSD M.2 2280 PCIe Gen4 TLC</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="storage">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/storage.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">4 TB SSD M.2 2280 PCIe Gen4 TLC</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-2000.00" data-category="storage">-RM 2,000.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/storage.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">2 TB SSD M.2 2280 PCIe Gen4 TLC</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-3000.00" data-category="storage">-RM 3,000.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/storage.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">1 TB SSD M.2 2280 PCIe Gen4 TLC</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select p-2 cursor-pointer border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-3500.00" data-category="storage">-RM 3,500.00</a>
+                  </div>
+                </div>
+                
+              </div>
+              <p id="displaytext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">DISPLAY</p>
+              <div id="display" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/screen.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">16" 3.2K (3200 x 2000), Mini-LED, Anti-Glare, Non-Touch, HDR 1000, 100% Adobe RGB, 100%DCI-P3, 1200 nits, 300Hz</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="screen">SELECTED</a>
+                  </div>
+                </div>
+                
+              </div>
+              <p id="cameratext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">CAMERA</p>
+              <div id="camera" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/camera.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">4K UHD with Dual Microphone</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="camera">SELECTED</a>
+                  </div>
+                </div>
+                
+              </div>
+              <p id="colortext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">COLOR</p>
+              <div id="color" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">Carbon Black</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="color">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">Carbon White</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="color">SELECTED</a>
+                  </div>
+                </div>
+                
+              </div>
+              <p id="fingertext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">FINGERPRINT RECOGNITION</p>
+              <div id="finger" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">Fingerprint Reader</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="finger">SELECTED</a>
+                  </div>
+                </div>
+              </div>
+              <p id="facetext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">FACE RECOGNITION</p>
+              <div id="face" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">Face Reader</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="face">SELECTED</a>
+                  </div>
+                </div>
+              </div>
+              <p id="keytext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">KEYBOARD</p>
+              <div id="key" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">Per-Key RGB Backlit, Black - English</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="keyboard">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">Per-Key White Backlit, Black - English</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-70.00" data-category="keyboard">-RM 70.00</a>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">WIFI</p>
+              <div class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">Killer Wi-Fi 6E 2x2 AX & Bluetooth® 5.1 or above</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="wifi">SELECTED</a>
+                  </div>
+                </div>
+              </div>
+              <p id="powertext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">POWER SOURCE</p>
+              <div id="power" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">NZXT C1200 PCIE5 1200W Gold</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="power">SELECTED</a>
+                  </div>
+                </div>
+              </div>
+              <p id="coolertext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">COOLING SYSTEM</p>
+              <div id="cooler" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img id="coolerimg" src="src/assets/krakenl53.png" class="rounded-lg w-[100px]" alt="">
+                  <br>
+                  <p id="coolername" class=" text-[14px]">KRAKEN L53 RGB</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="cooler">SELECTED</a>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">WARRANTY</p>
+              <div class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">4 Years Carry-in</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="warranty">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">3 Years Carry-in</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-100" data-category="warranty">-RM 100.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">2 Years Carry-in</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-200" data-category="warranty">-RM 200.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  
+                  <p class=" text-[14px]">1 Year Carry-in</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="-300" data-category="warranty">-RM 300.00</a>
+                  </div>
+                </div>
+              </div>
+              <p class="text-3xl mb-[10px] mt-[20px] underline lg:text-left max-lg:text-center">ACCESORIES</p>
+              <p id="monitortext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">MONITOR</p>
+              <div id="monitor" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <p class=" text-[14px]">NONE</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="monitor">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/dellmonitor.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">34" Alienware Curved QD-OLED 175Hz Gaming Monitor - AW3423DW</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="5499" data-category="monitor">+RM 5,499.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/samsungmonitor.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">49" Odyssey OLED G9 DQHD 240Hz Gaming Monitor - G95SC</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="8499" data-category="monitor">+RM 8,499.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/asusmonitor.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">24" ROG Swift PRO FHD 540Hz Gaming Monitor - PG248QP</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="4599" data-category="monitor">+RM 4,599.00</a>
+                  </div>
+                </div>
+              </div>
+              <p id="keyboardtext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">KEYBOARD</p>
+              <div id="keyboard" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <p class=" text-[14px]">NONE</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="keyboard1">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/g815.png" class="rounded-lg " alt="">
+                  <br>
+                  <p class=" text-[14px]">Logitech G913</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="899" data-category="keyboard1">+RM 899.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/g915.png" class="rounded-lg " alt="">
+                  <br>
+                  <p class=" text-[14px]">Logitech G813</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="599" data-category="keyboard1">+RM 599.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/g513.png" class="rounded-lg " alt="">
+                  <br>
+                  <p class=" text-[14px]">Logitech G513</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="469" data-category="keyboard1">+RM 469.00</a>
+                  </div>
+                </div>
+              </div>
+              <p id="mousetext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">MOUSE</p>
+              <div id="mouse" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <p class=" text-[14px]">NONE</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="mouse">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/g502x.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">Logitech G502 X PLUS</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="733" data-category="mouse">+RM 733.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/g502.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">Logitech G502</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="499" data-category="mouse">+RM 499.00</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/g903.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">Logitech G903</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="599" data-category="mouse">+RM 599.00</a>
+                  </div>
+                </div>
+              </div>
+              <p id="headsettext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">HEADSETS</p>
+              <div id="headset" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <p class=" text-[14px]">NONE</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="headset">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/g733.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">Logitech G733</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="439" data-category="headset">+RM 439.00</a>
+                  </div>
+                </div>
+              </div>
+              <p id="drivingtext" class="text-xl mb-[10px] mt-[20px] lg:text-left max-lg:text-center">DRIVING SET</p>
+              <div id="driving" class="grid grid-cols-2  gap-x-2 gap-y-2">
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <p class=" text-[14px]">NONE</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="0" data-category="driving">SELECTED</a>
+                  </div>
+                </div>
+                <div class="option-card md:col-span-1 max-md:col-span-2 flex flex-col justify-center text-center items-center rounded-lg border-[2px] dark:border-purple-500 border-blue-500 p-3">
+                  <img src="src/assets/g923.png" class="rounded-lg" alt="">
+                  <br>
+                  <p class=" text-[14px]">Logitech G923</p>
+                  <div
+                    class="text flex flex-col justify-center items-center w-[100%] mt-2"
+                  >
+                    <a class="option-select cursor-pointer p-2 border-[2px] border-blue-500 dark:border-purple-500 rounded-lg" data-price="1899" data-category="driving">+RM 1,899.00</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="md:col-span-1 max-md:col-span-2 order-2 lg:block max-lg:hidden"></div>
+            <div class="lg:col-span-2 max-lg:col-span-6 lg:order-3 max-lg:order-1 ">
+              <div class="sticky top-0 flex flex-col justify-center items-center">
+                <img src="" id="dynamicImage" class="w-[50%]" alt="">
+              <div class=" p-4 rounded-lg border-[5px] dark:border-purple-800 border-blue-800 w-[100%] ">
+                <p class="text-xl max-lg:text-center lg:text-left underline">YOUR CONFIGURATION</p>
+                <br>
+                <span><p id="totalPrice" class="max-lg:text-2xl lg:text-3xl max-lg:text-center lg:text-left text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600"></p></span>
+                <br class="md:block max-md:hidden">
+                <div id="priceDisplay" class="mt-2">
+                  <div class="flex justify-between">
+                    <span class="md:block max-md:hidden">Laptop Model</span>
+                    <span class="md:block max-md:hidden" id="laptopmodel"></span>
+                </div>
+                <br>
+                <div class="flex justify-between">
+                  <span class="md:block max-md:hidden">Serial Number</span>
+                  <span class="md:block max-md:hidden" id="serialNumberDisplay"></span>
+              </div>
+              <br>
+                    <div class="flex justify-between">
+                        <span class="md:block max-md:hidden">Base Price</span>
+                        <span class="md:block max-md:hidden" id="baseprice"></span>
+                    </div>
+                </div>
+                <br class="md:block max-md:hidden">
+                <a id="addtocart" href="#cart" class="cursor-pointer p-4 border-[2px] bg-gradient-to-tr from-blue-600 via-blue-400 to-blue-600 dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 border-none rounded-full">ADD TO CART!</a>
+                <br>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br><br>
+      <section id="cart">
+        <div class="min-h-[100vh] flex flex-col justify-start items-center text-center font-bold w-[100vw] xl:px-[8%] px-[5%] transition-all duration-[0.5s] ease-linear relative">
+          <h1
+          class="text-4xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600 mb-[10px] from-shadow-lg mt-[30px]"
+        >
+          CART
+        </h1>
+        <br>
+        <div class="grid grid-cols-6 w-[100%]">
+          <div id="cartContainer" class="lg:col-span-3 max-lg:col-span-6">
+          </div>
+          <div class="col-span-1 lg:block max-lg:hidden"></div>
+          <div class="lg:col-span-2 max-lg:col-span-6  flex-col w-[100%] justify-between items-center rounded-lg border-[3px] dark:border-purple-500 border-blue-500 py-5 px-2 pr-5 dark:bg-neutral-900 bg-neutral-300">
+            <div class="flex md:flex-row max-md:flex-col justify-between items-center">
+              <h4> Total Price</h4>
+            <span id="cartTotal" class="text-2xl text-left text-transparent bg-clip-text bg-gradient-to-r dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 from-blue-600 via-blue-400 to-blue-600">RM0.00</span>
+            </div>
+            <br>
+            <div class="flex justify-between items-center">
+              <h4> Tax (SST 8%)</h4>
+            <span >RM0.00</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <h4> Shipping Fee</h4>
+            <span >RM0.00</span>
+            </div>
+            <br>
+            <div class="flex md:flex-row max-md:flex-col justify-between items-center">
+              <h4> Apply Coupon</h4>
+            <input type="text" id="couponInput" placeholder="ENTER COUPON:" class="w-[200px] text-left rounded-lg bg-transparent text-neutral-900 p-3 dark:text-neutral-200 border-[3px] dark:border-purple-500 border-blue-500">
+
+            <a id="applycoupon" class="cursor-pointer mt-[10px] md:hidden max-md:block p-4 border-[2px] bg-gradient-to-tr from-blue-600 via-blue-400 to-blue-600 dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 border-none rounded-full">APPLY!</a>
+            </div>
+            <div id="discountNotification" class="hidden md:text-right max-md:text-center"></div>
+            <br>
+            <div class="flex md:flex-row max-md:flex-col justify-between items-center">
+              <label for="payment-method">Payment Method</label>
+            <select id="payment-method" class="block w-[200px] appearance-none bg-transparent border-[3px] dark:border-purple-500 border-blue-500 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-neutral-300 focus:dark:bg-neutral-900 focus:border-blue-500 focus:dark:border-purple-500 text-neutral-900 dark:text-neutral-200" name="payment-method">
+              <option value="mastercard">Mastercard</option>
+              <option value="visa">Visa</option>
+              <option value="tng-ewallet">Touch 'n Go eWallet</option>
+              <option value="grabpay">GrabPay</option>
+              <option value="paypal">PayPal</option>
+              <option value="maybank2u">Maybank2U</option>
+              <option value="cimb-clicks">CIMB Clicks</option>
+              <option value="boost">Boost</option>
+            </select>
+            </div>
+            <br>
+            <br>
+            <a id="checkOut" href="#home" class="mb-[15px] text-xl cursor-pointer p-4 border-[2px] bg-gradient-to-tr from-blue-600 via-blue-400 to-blue-600 dark:from-purple-600 dark:via-purple-400 dark:to-purple-600 border-none rounded-full">CHECKOUT!</a>
+          </div>
+          
+        </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="flex h-[200px] justify-evenly w-full items-end dark:bg-neutral-900 bg-neutral-300"
+    >
+        <div
+          class="flex flex-col h-full justify-center items-center"
+        >
+          <p class="font-bold text-center">&copy; 2024 EPC HUB. All rights reserved.</p>
+          <br />
+          <br />
+          <p class="font-bold">Contact Us</p>
+          <br />
+          <div class="grid grid-cols-3 gap-x-8">
+            <a href="https://www.youtube.com/channel/UCNWJ7MLO81A7tQLFG2OsM8Q"
+              ><i class="fa-brands fa-youtube text-3xl hover:text-red-700"></i
+            ></a>
+            <a href="https://www.instagram.com/logan_kannan842008/"
+              ><i
+                class="fa-brands fa-instagram text-3xl bg-gradient-to-br dark:from-neutral-300 via-neutral-900 dark:via-neutral-300 dark:to-neutral-300 from-neutral-900 to-neutral-900 text-transparent bg-clip-text hover:from-purple-700 hover:to-yellow-500 hover:via-orange-600"
+              ></i
+            ></a>
+            <a href="https://twitter.com/logan_kannan"
+              ><i
+                class="fa-brands fa-x-twitter text-3xl hover:text-blue-500"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <div class="max-md:hidden md:block flex flex-col h-full justify-center items-center">
+          <br>
+          <div class="text-center">
+            <p class="font-bold">Partership with:</p>
+          <br>
+          <div class="grid grid-cols-3 w-full h-full gap-x-8 gap-y-8">
+            <div class="col-span-1">
+              <img src="src/assets/lenovo.png" class="w-[100px] rounded-lg" alt="">
+            </div>
+            <div class="col-span-1">
+              <img src="src/assets/nzxt.png" class="w-[100px] " alt="">
+            </div>
+            <div class="col-span-1">
+              <img src="src/assets/samsung.png" class="w-[100px] rounded-lg" alt="">
+            </div>
+            <div class="col-span-1">
+              <img src="src/assets/intellogo.png" class="w-[100px] rounded-lg" alt="">
+            </div>
+            <div class="col-span-1">
+              <img src="src/assets/amdlogo.png" class="w-[100px] rounded-lg" alt="">
+            </div>
+            <div class="col-span-1">
+              <img src="src/assets/nvidialogo.png" class="w-[100px] rounded-lg" alt="">
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/src/script.js"></script>
+  </body>
+</html>
